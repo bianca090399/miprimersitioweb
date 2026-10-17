@@ -1,0 +1,347 @@
+ :root {
+  --primary-color: #d4a373; /* Tono cálido / Nude */
+  --primary-hover: #bc8a5f;
+  --bg-light: #faf7f2;      /* Blanco cálido de fondo */
+  --text-dark: #2b2b2b;
+  --text-muted: #6c757d;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  color: var(--text-dark);
+  background-color: #fdfbf7;
+}
+
+/* 1. Barrita de anuncio superior */
+.top-bar {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* 2. Header / Barra de navegación */
+.header {
+  background-color: var(--white);
+  border-bottom: 1px solid #f0e6df;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Logo de Alma */
+.header__logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-decoration: none;
+  font-family: 'Playfair Display', Georgia, serif;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.header__logo span {
+  font-size: 0.65rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin-top: 4px;
+}
+
+/* Buscador */
+.header__search {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-light);
+  border: 1px solid #e8dfd8;
+  border-radius: 20px;
+  padding: 0.4rem 0.8rem;
+  flex: 1;
+  max-width: 320px;
+}
+
+.header__search input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 0.85rem;
+}
+
+.header__search button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Navegación */
+.header__nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav__link:hover, .nav__link.active {
+  color: var(--primary-color);
+}
+
+/* Botones de acción */
+.header__actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  padding: 0.3rem;
+}
+
+.cart-btn .cart-count {
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 3. Hero Banner */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), 
+              url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  height: 70vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  padding: 2rem;
+}
+
+.hero__content {
+  max-width: 650px;
+}
+
+.hero__subtitle {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.hero__title {
+  font-size: 2.8rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero__text {
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.hero__btn {
+  display: inline-block;
+  background-color: var(--white);
+  color: var(--text-dark);
+  padding: 0.85rem 2rem;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero__btn:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Grilla del catálogo */
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos de las tarjetas */
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card__img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover; /* Evita que la imagen se deforme */
+}
+
+.card__info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card__price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.card__btn {
+  margin-top: auto;
+  padding: 0.75rem;
+  border: none;
+  background-color: #111111;
+  color: #ffffff;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card__btn:hover {
+  background-color: #333333;
+}
+/* Footer General */
+.footer {
+  background-color: #111111;
+  color: #ffffff;
+  padding-top: 3rem;
+  margin-top: 4rem; /* Separa el footer del catálogo */
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Columnas */
+.footer__col {
+  flex: 1 1 200px; /* Se adaptan automáticamente al tamaño de pantalla */
+}
+
+.footer__col h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  border-bottom: 2px solid #333333;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.footer__col p {
+  font-size: 0.9rem;
+  color: #cccccc;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Listas */
+.footer__list {
+  list-style: none;
+}
+
+.footer__list li {
+  font-size: 0.9rem;
+  color: #cccccc;
+  margin-bottom: 0.5rem;
+}
+
+/* Redes Sociales */
+.footer__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer__socials a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer__socials a:hover {
+  color: #ffffff;
+}
+
+/* Barra Inferior Copyright */
+.footer__bottom {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #080808;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #888888;
+  border-top: 1px solid #222222;
+}

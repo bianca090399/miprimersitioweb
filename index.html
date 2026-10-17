@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi sitio web de indumentaria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cedarville+Cursive&family=Comic+Relief:wght@400;700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <div class="top-bar">
+  ✨ 3 y 6 cuotas sin interés | Envíos gratis en compras superiores a $45.000 ✨
+</div>
+
+<!-- ENCABEZADO / NAVBAR -->
+<header class="header">
+  <div class="header__container">
+    
+    <!-- Nombre / Logo de la Tienda -->
+    <a href="#" class="header__logo">
+      Alma <span>Indumentaria Femenina</span>
+    </a>
+
+    <!-- Buscador -->
+    <div class="header__search">
+      <input type="text" placeholder="Buscar vestidos, remeras, pantalones...">
+      <button type="button">🔍</button>
+    </div>
+
+    <!-- Menú de Navegación -->
+    <nav class="header__nav">
+      <a href="#inicio" class="nav__link active">Inicio</a>
+      <a href="#catalogo" class="nav__link">Productos</a>
+      <a href="#nosotras" class="nav__link">Nosotras</a>
+      <a href="#contacto" class="nav__link">Contacto</a>
+    </nav>
+
+    <!-- Acciones (Usuario y Carrito) -->
+    <div class="header__actions">
+      <button class="icon-btn" title="Mi Cuenta">👤</button>
+      <button class="icon-btn cart-btn" title="Carrito">
+        🛒 <span class="cart-count">0</span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- SECCIÓN PRINCIPAL / HERO BANNER -->
+<section class="hero" id="inicio">
+  <div class="hero__content">
+    <span class="hero__subtitle">Nueva Colección 2026</span>
+    <h1 class="hero__title">Resaltá tu estilo único y natural</h1>
+    <p class="hero__text">Prendas pensadas para acompañarte todos los días con comodidad y elegancia.</p>
+    <a href="#catalogo" class="hero__btn">Ver Colección</a>
+  </div>
+</section>
+
+  <main class="catalogo">
+    
+    <!-- Tarjeta 1 -->
+    <article class="card">
+      <img src="remera oversize.jpeg" alt="Remera Básiica Negra" class="card__img">
+      <div class="card__info">
+        <h2 class="card__title">Remera Básica Oversize</h2>
+        <p class="card__price">$15.500</p>
+        <button class="card__btn">Ver detalle</button>
+      </div>
+    </article>
+
+    <!-- Tarjeta 2 -->
+    <article class="card">
+      <img src="buzo hoodie.jpg" alt="Buzo Hoodie Gris" class="card__img">
+      <div class="card__info">
+        <h2 class="card__title">Buzo Hoodie Canguro</h2>
+        <p class="card__price">$32.000</p>
+        <button class="card__btn">Ver detalle</button>
+      </div>
+    </article>
+
+    <!-- Tarjeta 3 -->
+    <article class="card">
+      <img src="pantalon cargo.jpg" alt="Pantalón Cargo" class="card__img">
+      <div class="card__info">
+        <h2 class="card__title">Pantalón Cargo Ripstop</h2>
+        <p class="card__price">$28.900</p>
+        <button class="card__btn">Ver detalle</button>
+      </div>
+    </article>
+
+    <!-- Tarjeta 4 -->
+    <article class="card">
+      <img src="campera denim.jpg" alt="Campera Denim" class="card__img">
+      <div class="card__info">
+        <h2 class="card__title">Campera Denim Classic</h2>
+        <p class="card__price">$45.000</p>
+        <button class="card__btn">Ver detalle</button>
+      </div>
+    </article>
+  </main>
+  <footer class="footer">
+  <div class="footer__container">
+
+    <!-- Columna 1: Contacto -->
+    <div class="footer__col">
+      <h3>Contacto</h3>
+      <p>📍 Quilmes, Buenos Aires</p>
+      <p>📱 WhatsApp: +54 9 11 1234-5678</p>
+      <p>✉️ hola@tutienda.com</p>
+    </div>
+
+    <!-- Columna 2: Medios de Pago -->
+    <div class="footer__col">
+      <h3>Medios de Pago</h3>
+      <ul class="footer__list">
+        <li>💳 Tarjetas de crédito y débito</li>
+        <li>💵 Efectivo / Transferencia</li>
+        <li>📱 Mercado Pago</li>
+      </ul>
+    </div>
+
+    <!-- Columna 3: Envíos -->
+    <div class="footer__col">
+      <h3>Envíos</h3>
+      <ul class="footer__list">
+        <li>🛵 Envíos a domicilio</li>
+        <li>📦 Correo Argentino / OCA</li>
+        <li>🏬 Retiro gratis por el local</li>
+      </ul>
+    </div>
+
+    <!-- Columna 4: Redes Sociales -->
+    <div class="footer__col">
+      <h3>Seguinos</h3>
+      <div class="footer__socials">
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">TikTok</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Derechos de autor / Legales -->
+  <div class="footer__bottom">
+    <p>&copy; 2026 Tu Tienda de Ropa - Todos los derechos reservados.</p>
+  </div>
+</footer>
+</body>
+ 
